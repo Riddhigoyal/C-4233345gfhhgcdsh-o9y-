@@ -3,13 +3,14 @@ object=[];
 objectname=document.getElementById("box").value;
 
 function preload(){
-    video=createVideo("video.mp4");
-    video.hide();
+    
 }
 
 function setup(){
     canvas=createCanvas(480,380);
     canvas.center();
+    video=createVideo("video.mp4");
+    video.hide();
 }
 
 function speak(){
