@@ -1,49 +1,60 @@
+<!--created by prashant shukla-->
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <title>Ping Pong</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
 
-	<title>AI Finder</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-
-  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body background="bg.jpg">
-<center>
-<h1 class="btn heading"> A.I. Object Finder</h1>
-<h2 class="btn"> The Input Name Which You Will Give Should Math The Names Present In COCOSSD Model Than Only It Will Detect</h2>
-<br>
-<span>Object name: </span>
-<br>
-<input id="box" type="text">
-<br>
-<button class="btn " id="start" onclick="start()"> Start </button>
-<br> 
-<br>
-<h3 class="btn btn-info" id="status"></h3>
-<h3 class="btn btn-danger" id="founding"></h3>
-</center>
-
-<div id="copyrightfooter">
-Developed by - Riddhi Goyal
-</div>
-
-<script src="main.js"></script>
-
-</body>
-
-</html>
+    </head>
+    <body background="bg2.jpg">
+        <center>
+            <div class="btn heading">
+                <h3>AI Ping Pong Game</h3>
+                <button class="btn btn-info" data-toggle="modal" data-target="#my_modal">Instructions</button>
+            </div>
+              <br>
+              <br>
+              <button class="btn btn-success" onclick="start_game()" id="start">Play Game</button>
+              <br>
+              <br>
+              <h3 id="status" class="btn btn-danger"></h3>
+              <br>
+              <br>
+              <div id="canvas"></div>
+              <br>
+              <br>
+              <button id="reset" onclick="restsart()" class="btn btn-danger">Restart</button>
+              <br>
+              <br>
+              <h4>Developed by - Riddhi Goyal</h4>
+              <div id="my_modal" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal">&times;</button>
+                      <h4 style="background-color: white; color: black;">Instructions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                      <li>First Keep Your Laptop Screen Straight.</li>
+                      <li>Move Yourself Approximately 3-4 Feet Away From The Laptop.</li>
+                      <li>Move Your Right Wrist In An Ascending And Descending Manner, A Red Dot Should Appear On Your Right Wrist.</li>
+                      <li>Now Press The Play Button, And Again Move Yourself 3-4 Feet Away From The Laptop.</li>
+                      <li>The Red Paddel In Your Paddel, That Will Move As Per The Movement Of Your Right Wrist.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </center>
+        <script src="main.js"></script>
+         </body>
+       </html>
