@@ -41,9 +41,9 @@ function modelLoaded(){
 
 function got_results(result){
   if(result.length > 0)   {
-    rightX= result[0].pose.nose.x;
-    rightY= result[0].pose.nose.y;
-    rightScore= result[0].pose.keypoints[1].score;
+    rightX= result[0].pose.rightWrist.x;
+    rightY= result[0].pose.rightWrist.y;
+    rightScore= result[0].pose.keypoints[10].score;
     }  
 }
 
