@@ -1,5 +1,5 @@
 function preload(){
-  balltouch= loadSound("ball_touch_padel.wav");
+  balltouch= loadSound("ball_touch_paddel.wav");
   missed= loadSound("missed.wav");
 }
 /*created by prashant shukla*/
