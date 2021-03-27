@@ -157,7 +157,7 @@ function move(){
    }
   if (ball.x-2.5*ball.r/2< 0){
   if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
-    balltouck.play();
+    balltouch.play();
     ball.dx = -ball.dx+0.5; 
   }
   else{
@@ -207,6 +207,7 @@ function paddleInCanvas(){
 }
 
 function restart(){
+  loop();
   playerscore =0;
   pcscore =0;
 }
