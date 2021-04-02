@@ -56,17 +56,10 @@ function got_results(result){
     }  
 }
 
-function draw(){
-
-  if(status=="start"){
-    if(rightScore > 0.2){
-      fill("#000080");
-      stroke("#000080");
-      circle(rightX,rightY,30);
-    }
+function draw(){ 
   
    background(0); 
-  
+   image(video,0,0,700,600)
    fill("black");
    stroke("black");
    rect(680,0,20,700);
@@ -74,8 +67,13 @@ function draw(){
    fill("black");
    stroke("black");
    rect(0,0,20,700);
-   image(video,0,0,700,600)
    
+   if(rightScore > 0.2){
+    fill("#000080");
+    stroke("#000080");
+    circle(rightX,rightY,30);
+  }
+  if(status=="start"){
      //funtion paddleInCanvas call 
      paddleInCanvas();
    
@@ -207,7 +205,7 @@ function paddleInCanvas(){
 }
 
 function restart(){
-  loop();
   playerscore =0;
   pcscore =0;
+  loop();
 }
